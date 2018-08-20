@@ -1,0 +1,28 @@
+package xfgx;
+
+
+
+import java.io.BufferedReader;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class zz {
+
+	   @DataProvider(name = "test")
+	    public Iterator<Object []> provider( ) throws InterruptedException
+	    {
+	        List<Object []> testCases = new ArrayList<>();
+	        testCases.add(new Object[] {"10","10","10"});
+
+	        return testCases.iterator();
+	    }	
+	
+	  @Test(dataProvider="test")
+	 public void test(String a , String b) {
+		 System.out.println(a+b);
+	 }
+}
